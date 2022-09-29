@@ -27,13 +27,19 @@ const AllCards = () => {
             </div>
             <div className="w-1/4 bg-slate-500 rounded-lg">
                 
-                <div className="flex items-center mt-4 ml-5">
+                <div className="flex items-center mt-4 ml-5 text-white gap-2">
                     <img className="w-20 rounded-full" src="https://placeimg.com/192/192/people" alt=''/>
                     <div className=''>
                         <strong>Alina Wishton</strong>
                         <p>Japan,Tokyo</p>
                     </div>
-                    </div>
+                </div>
+
+                <div className='flex justify-center items-center mt-6 bg-slate-200 w-80 h-14 mx-auto rounded-lg gap-5'>
+                    <p><span className='text-3xl font-bold'>57</span>kg</p>
+                    <p><span className='text-3xl font-bold'>5.4</span>hight</p>
+                    <p><span className='text-3xl font-bold'>24</span>yr</p>
+                </div>
             </div>
             
         </div>
