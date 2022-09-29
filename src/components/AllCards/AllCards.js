@@ -7,10 +7,9 @@ const AllCards = () => {
 
     const [count, setCount] = useState([])
 
-    const [addBreak,setAddBreak] = useState('')
+    const [addBreak,setAddBreak] = useState(0)
 
     useEffect(()=>{
-        // console.log('item in fetch')
         fetch('product.json')  
         .then(res =>res.json())
         .then(data =>setItems(data))
@@ -21,32 +20,21 @@ const AllCards = () => {
 
     const handleAddBtn = (click)=>{
         // console.log(click)
-        // const newAdd = [...sidebar.data]
         setCount([...count,click])
     }
 
-    // const addBreakTimeBtn = (click) =>{
-    //     console.log(click)
-
-    // }
-    // const handleClick =(event) =>{
-    //     const getSameValue = event.currentTarget.value
-    //     btnVal(getSameValue)
-    //   }
     
-        const addBreakTimeBtn =(event) =>{
-        const getSameValue = event.target.value
-        setAddBreak(getSameValue);
-      }
+    
+       
 
     return (
-        <div className='flex mt-5 gap-4'>
+        <div className='flex mt-5  grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className="w-3/4 bg-slate-300 h-full gird grid-cols-3 rounded-lg ">
                 <h1 className='text-2xl font-bold mt-3'>Select today’s exercis</h1>
                 
                 {/* <SingleCard itemws={items}></SingleCard> */}
                
-                <div className='grid grid-cols-3 gap-4 p-5 mt-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 mt-5'>
                         
                 {
                     items?.length&&items.map(card=> <SingleCard card={card} key={card.id} handleAddBtn={handleAddBtn} ></SingleCard>)
@@ -74,11 +62,11 @@ const AllCards = () => {
                 <div className='mt-10'>
                     <h2 className='text-white text-2xl font-bold mb-3'>Add A Break </h2>
                     <div className='bg-slate-200 w-80 h-16 text-xl  mx-auto rounded-lg p-2'>
-                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-5'>90s</button>
-                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>60s</button>
-                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>40s</button>
-                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>70s</button>
-                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10'>50s</button>
+                        <button onClick={(e)=>setAddBreak("90s")} className='btn btn-primary w-10 mr-5'>90s</button>
+                        <button onClick={(e)=>setAddBreak("60s")} className='btn btn-primary w-10 mr-3'>60s</button>
+                        <button onClick={(e)=>setAddBreak("49s")} className='btn btn-primary w-10 mr-3'>40s</button>
+                        <button onClick={(e)=>setAddBreak("70s")} className='btn btn-primary w-10 mr-3'>70s</button>
+                        <button onClick={(e)=>setAddBreak("50s")} className='btn btn-primary w-10'>50s</button>
                     </div>
                 </div>
                 
