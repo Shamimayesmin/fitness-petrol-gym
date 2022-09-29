@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Sidebar = (props) => {
     // console.log(props)
+
+    // const [time, setTime] = ([])
+
+
+   
 
     const {count,addBreak} = props
     // console.log(props)
@@ -14,6 +19,9 @@ const Sidebar = (props) => {
     }
    
     
+    // useEffect(() => {
+    //     localStorage.setItem('second', JSON.stringify(time));
+    //   }, [time])
 
     return (
         <div>
@@ -28,7 +36,7 @@ const Sidebar = (props) => {
                 <p>Break time: {addBreak}</p>
                     
             </div>
-            <button  className="btn btn-secondary mt-8">Activity Completed</button>
+            <button  className="btn btn-secondary mt-8 mb-8">Activity Completed</button>
             
         </div>
     );
