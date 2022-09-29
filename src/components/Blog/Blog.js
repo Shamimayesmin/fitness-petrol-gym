@@ -7,7 +7,8 @@ const Blog = () => {
                 
                 <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-10 mb-10">
                 <div className="collapse-title text-3xl font-medium">
-                    Blog
+                   <h2 className='text-emerald-500 mb-4 bg-slate-300 h-16 p-3 rounded-lg'> Blog</h2>
+                    
                     <p className='text-2xl'>1.How does react works?</p>
                 </div>
                 <div className="collapse-content"> 
