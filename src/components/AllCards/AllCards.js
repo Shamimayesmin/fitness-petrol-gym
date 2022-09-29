@@ -27,52 +27,12 @@ const AllCards = () => {
     
 
 
-    useEffect(() => {
-        // const data = localStorage.getItem('secend')
-        // console.log(data)
-        const items = localStorage.getItem('secend');
-            if (items) {
-                setAddBreak(items);
-            }
-        
-        
-    //  localStorage.setItem('secend', JSON.stringify(addBreak));
-       
-        // console.log(time)
-        
-      }, []);
-
-      
-    // useEffect(() => {
-    //     const items = localStorage.getItem('secend');
-    //         if (items) {
-    //             setAddBreak(items);
-    //         }
-        
-          
-        
-    //  localStorage.setItem('secend', JSON.stringify(addBreak));
-       
-    //     // console.log(time)
-        
-
-
-        
-    //   }, [addBreak]);
 
     
 
       const addBreakTime = (e) =>{
-        setAddBreak(e)
-    
-        const items = localStorage.getItem('secend');
-            if (items) {
-                setAddBreak(items);
-            }
-        
-        localStorage.setItem('secend', JSON.stringify(addBreak));
-
-        // console.log(e)
+        const time = e.target.innerText ;
+        setAddBreak(time)
         
 
     } 
@@ -112,7 +72,7 @@ const AllCards = () => {
                 <div className='mt-10'>
                     <h2 className='text-white text-2xl font-bold mb-3'>Add A Break </h2>
                     <div className='bg-slate-200 w-80 h-16 text-xl  mx-auto rounded-lg p-2'>
-                        <button onClick={(e)=>addBreakTime("90s")} className='btn btn-primary w-10 mr-5'>90s</button>
+                        <button onClick={(e) =>setAddBreak("90s")} className='btn btn-primary w-10 mr-5'>90s</button>
                         <button onClick={(e)=>setAddBreak("60s")} className='btn btn-primary w-10 mr-3'>60s</button>
                         <button onClick={(e)=>setAddBreak("49s")} className='btn btn-primary w-10 mr-3'>40s</button>
                         <button onClick={(e)=>setAddBreak("70s")} className='btn btn-primary w-10 mr-3'>70s</button>
