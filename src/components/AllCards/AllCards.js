@@ -28,13 +28,13 @@ const AllCards = () => {
        
 
     return (
-        <div className='flex mt-5  grid-cols-1 lg:grid-cols-2 gap-4'>
-            <div className="w-3/4 bg-slate-300 h-full gird grid-cols-3 rounded-lg ">
+        <div className='container flex flex-wrap  lg:flex-nowrap mt-5  gap-4'>
+            <div className="sm:w-full lg:w-3/4 bg-slate-300 h-full gird grid-cols-3 rounded-lg ">
                 <h1 className='text-2xl font-bold mt-3'>Select today’s exercis</h1>
                 
                 {/* <SingleCard itemws={items}></SingleCard> */}
                
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 mt-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 mt-5 '>
                         
                 {
                     items?.length&&items.map(card=> <SingleCard card={card} key={card.id} handleAddBtn={handleAddBtn} ></SingleCard>)
@@ -43,7 +43,7 @@ const AllCards = () => {
                 
             </div>
             {/* sidebar section */}
-            <div className="w-1/4 bg-slate-500 rounded-lg">
+            <div className="sm:w-full lg:w-1/4 bg-slate-500 rounded-lg">
                 
                 <div className="flex items-center mt-4 ml-5 text-white gap-2">
                     <img className="w-20 rounded-full" src="https://placeimg.com/192/192/people" alt=''/>
@@ -53,7 +53,7 @@ const AllCards = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-center items-center mt-6 bg-slate-200 w-80 h-14 mx-auto rounded-lg gap-5'>
+                <div className='flex  justify-center items-center mt-6 bg-slate-200 w-80 h-14 mx-auto rounded-lg gap-5'>
                     <p><span className='text-3xl font-bold'>57</span>kg</p>
                     <p><span className='text-3xl font-bold'>5.4</span>hight</p>
                     <p><span className='text-3xl font-bold'>24</span>yr</p>
@@ -76,6 +76,7 @@ const AllCards = () => {
                 <Sidebar addBreak={addBreak}  count={count} ></Sidebar>
                 </div>
             </div>
+
             
         </div>
     );

@@ -13,11 +13,7 @@ const Sidebar = (props) => {
 
     }
    
-    // let preBreak = 0
-    // for(const item of addBreak){
-    //     preBreak = preBreak + item.value
-
-    // }
+    
 
     return (
         <div>
@@ -30,10 +26,7 @@ const Sidebar = (props) => {
             </div>
             <div className='bg-slate-200 w-80 h-16 text-xl mx-auto rounded-lg mt-5 p-2'>
                 <p>Break time: {addBreak}</p>
-                {/* {
-                    addBreak?.map(i =><p>{i.time}</p>)
-                } */}
-                
+                    
             </div>
             <button  className="btn btn-secondary mt-8">Activity Completed</button>
             
