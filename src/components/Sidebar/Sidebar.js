@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Tost from '../Tost/Tost';
 import Swal from 'sweetalert2'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Sidebar = (props) => {
     // console.log(props)
 
-    const [toast,setToast] = useState('')
+    // const [toast,setToast] = useState('')
 
     // const [time, setTime] = ([])
 
@@ -28,14 +31,9 @@ const Sidebar = (props) => {
     //   }, [time])
 
 
-    const hanldleCompleteBtn = (e) =>{
-        setToast(e)
-        Swal.fire(
-            'Good job!',
-            'Activity Completed!',
-            'success'
-          )
-
+    const hanldleCompleteBtn = () =>{
+        toast("Wow Activity Completed!");
+        
     }
 
     return (
@@ -51,9 +49,9 @@ const Sidebar = (props) => {
                 <p>Break time: {addBreak}</p>
                     
             </div>
-            {/* <Tost toast={toast}></Tost>  */}
-            <button toast={toast} onClick={(e) => hanldleCompleteBtn(e) } className="btn btn-secondary mt-8 mb-8">Activity Completed</button>
-            
+            {/* <Tost toast={toast}></Tost> toast={toast} */}
+            <button  onClick={ hanldleCompleteBtn } className="btn btn-secondary mt-8 mb-8">Activity Completed</button>
+            <ToastContainer />
         </div>
     );
 };
