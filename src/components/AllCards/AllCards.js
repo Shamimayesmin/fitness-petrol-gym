@@ -1,15 +1,44 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from '../Sidebar/Sidebar';
 import SingleCard from '../SingleCard/SingleCard';
 
 const AllCards = () => {
     const [items,setItems] = useState([])
+
+    const [count, setCount] = useState([])
+
+    const [addBreak,setAddBreak] = useState('')
 
     useEffect(()=>{
         // console.log('item in fetch')
         fetch('product.json')  
         .then(res =>res.json())
         .then(data =>setItems(data))
+        
+
     },[])
+
+
+    const handleAddBtn = (click)=>{
+        // console.log(click)
+        // const newAdd = [...sidebar.data]
+        setCount([...count,click])
+    }
+
+    // const addBreakTimeBtn = (click) =>{
+    //     console.log(click)
+
+    // }
+    // const handleClick =(event) =>{
+    //     const getSameValue = event.currentTarget.value
+    //     btnVal(getSameValue)
+    //   }
+    
+        const addBreakTimeBtn =(event) =>{
+        const getSameValue = event.target.value
+        setAddBreak(getSameValue);
+      }
+
     return (
         <div className='flex mt-5 gap-4'>
             <div className="w-3/4 bg-slate-300 h-full gird grid-cols-3 rounded-lg ">
@@ -20,11 +49,12 @@ const AllCards = () => {
                 <div className='grid grid-cols-3 gap-4 p-5 mt-5'>
                         
                 {
-                    items?.length&&items.map(card=> <SingleCard card={card} key={card.id}></SingleCard>)
+                    items?.length&&items.map(card=> <SingleCard card={card} key={card.id} handleAddBtn={handleAddBtn} ></SingleCard>)
                 }
                 </div>
                 
             </div>
+            {/* sidebar section */}
             <div className="w-1/4 bg-slate-500 rounded-lg">
                 
                 <div className="flex items-center mt-4 ml-5 text-white gap-2">
@@ -39,6 +69,23 @@ const AllCards = () => {
                     <p><span className='text-3xl font-bold'>57</span>kg</p>
                     <p><span className='text-3xl font-bold'>5.4</span>hight</p>
                     <p><span className='text-3xl font-bold'>24</span>yr</p>
+                </div>
+
+                <div className='mt-10'>
+                    <h2 className='text-white text-2xl font-bold mb-3'>Add A Break </h2>
+                    <div className='bg-slate-200 w-80 h-16 text-xl  mx-auto rounded-lg p-2'>
+                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-5'>90s</button>
+                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>60s</button>
+                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>40s</button>
+                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10 mr-3'>70s</button>
+                        <button onClick={(e)=>setAddBreak(e.target.value)} className='btn btn-primary w-10'>50s</button>
+                    </div>
+                </div>
+                
+
+                <div className=''>
+                    
+                <Sidebar addBreak={addBreak}  count={count} ></Sidebar>
                 </div>
             </div>
             

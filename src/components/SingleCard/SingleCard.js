@@ -1,8 +1,9 @@
 import React from 'react';
 
 const SingleCard = (props) => {
-    console.log(props.card)
-    const{age,img,name,time,description} = props.card
+    // console.log(props.card)
+    const{ id,age,img,name,time,description} = props.card
+    const newCount = {id,time}
     // console.log(img)
     //props?.card?.
     
@@ -19,7 +20,7 @@ const SingleCard = (props) => {
                     
                     <div className="card-actions justify-end">
                     
-                    <button className="btn btn-primary">Add To List</button>
+                    <button onClick={() =>props.handleAddBtn(newCount)} className="btn btn-primary">Add To List</button>
                     </div>
                 </div>
             </div>
