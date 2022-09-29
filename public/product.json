@@ -1,0 +1,84 @@
+[
+    
+  {
+    "id": "1",
+    "name": "Yoga",
+    "time": 90,
+    "age": "18-50",
+    "description": "It is known as the corrector of the curvature and makes the spine flexible. The curve structure of the asana massages the deep back muscles, spine and nerves",
+    "img" :"https://i.ibb.co/BzdXn4T/card10.jpg"
+    
+  },
+  {
+    "id": "2",
+    "name": "Font-squat",
+    "time": 50,
+    "age": "20-40",
+    "description": "Font-squat is a compound, full body exercise that trains primarily the muscles of the thighs, hips and buttocks, hamstrings, as well as strengthening the bones, ligaments, and insertion of the tendons throughout the lower body",
+    
+    "img" :"https://i.ibb.co/X8C5rZW/card2.jpg"
+    
+  },
+  {
+    "id": "3",
+    "name": "Skip",
+    "time": 60,
+    "age": "20-30",
+    "description": "To jump lightly over a rope that is held in both your hands, or by two other people, and swung repeatedly under your legs and over your head as an exercise or a game",
+    "img": "https://i.ibb.co/0GRnCz6/card3.jpg"
+     
+  },
+  {
+    "id": "4",
+    "name": "Dumb-Bell",
+    "time": 70,
+    "age": "20-25",
+    "description": "A short bar with a weight on each end that you lift up and down to make your arm and shoulder muscles stronger",
+    "img": "https://i.ibb.co/0DZ1XMD/card5.jpg"
+
+  },
+  { 
+    "id": "5",
+    "name": " Treadmill",
+    "time": 120,
+    "age": "18-35",
+    "description": "Treadmill is an exercise machine that has a moving surface that you can walk or run on while remaining in the same place",
+    "img": "https://i.ibb.co/YBtWQcH/card6.jpg" 
+  },
+  {
+    "id": "6",
+    "name": "Barbell",
+    "time":90,
+    "age":  "25-35",
+    "description": "Barbell a piece of a tool used in weight training, bodybuilding, weightlifting, and powerlifting, consisting of a long metal bar with weights attached at each end",
+    "img": "https://i.ibb.co/FXnCZJx/card7.jpg"
+    
+  },
+  {
+    "id": "7",
+    "name": "Plank",
+    "time": 60,
+    "age": "20-25",
+    "description": "Plank is an isometric core strength exercise that involves maintaining a position similar to a push-up for the maximum possible time",
+    "img": "https://i.ibb.co/LJSDcFK/card8.png"
+       
+  },
+  {
+    "id": "8",
+    "name": "Shoulder press",
+    "time": 50,
+    "age": "25-35",
+    "description": " Shoulder press a piece of a tool used in weight training, bodybuilding, weightlifting, and powerlifting, consisting of a long metal bar with weights attached at each end",
+    "img": "https://i.ibb.co/n7PXdCp/card8.jpg"
+     
+  },
+  {
+    "id": "9",
+    "name": "Treadmill",
+    "time": 100,
+    "age": "20-30",
+    "description": "Treadmill is an exercise machine that has a moving surface that you can walk or run on while remaining in the same place",
+    "img": "https://i.ibb.co/f064h14/card9.jpg"
+      
+  }
+]
